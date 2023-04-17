@@ -2,8 +2,14 @@ pipeline {
     agent any
     stages {
         stage('Build') { 
+            agent {
+                docker {
+                    image 'third'
+                    reuseNode true
+                }
+            }
             steps {
-                bat 'docker run -p 3000:3000 -d third'
+                sh 'echo "hello"'
             }
         }
         // stage('Run') { 
