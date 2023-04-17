@@ -3,10 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             agent {
-                docker {
-                    image 'third'
-                    reuseNode true
-                }
+                dockerfile true
             }
             steps {
                 sh 'echo "hello"'
