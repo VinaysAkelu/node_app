@@ -18,7 +18,7 @@ pipeline{
         stage('Build'){
             steps{
                 dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
-                    bat 'docker-compose -f sample.yml up --detach'
+                    bat 'docker-compose -f sample.yml up --detach --build'
                 }
             }
         }
