@@ -7,14 +7,14 @@ pipeline{
                 git 'https://github.com/VinaysAkelu/node_app'
             }
         }
-        stage('Build Images'){
-            steps{
-                bat 'docker build -t application .'
-                dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
-                    bat 'docker build -t server1 .'
-                }
-            }
-        }
+        // stage('Build Images'){
+        //     steps{
+        //         bat 'docker build -t application .'
+        //         dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
+        //             bat 'docker build -t server1 .'
+        //         }
+        //     }
+        // }
         stage('Build'){
             steps{
                 dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
