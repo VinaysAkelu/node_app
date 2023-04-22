@@ -7,18 +7,19 @@ pipeline{
                 git 'https://github.com/VinaysAkelu/node_app'
             }
         }
-        // stage('Build Images'){
-        //     steps{
-        //         bat 'docker build -t application .'
-        //         dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
-        //             bat 'docker build -t server1 .'
-        //         }
-        //     }
-        // }
+        stage('Build Images'){
+            steps{
+                bat 'docker build -t application --no-cache .'
+                dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
+                    bat 'docker build -t server1 --no-cahe .'
+                }
+            }
+        }
         stage('Build'){
             steps{
                 dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
-                    bat 'docker-compose -f sample.yml up --detach --build'
+                    // bat 'docker compose build'
+                    bat 'docker compose -f sample.yml up -d'
                 }
             }
         }
