@@ -3,7 +3,7 @@ services :
   app1 :
     image : application
     build:
-      context : C:\ProgramData\Jenkins\.jenkins\workspace\sample_Server_pipeline\
+      context : C:\ProgramData\Jenkins\.jenkins\workspace\Project_pipeline\
     container_name : app
   
   # app2 :
