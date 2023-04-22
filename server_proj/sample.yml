@@ -16,6 +16,6 @@ services :
     build : 
       context : .
     container_name : server
-    # ports : 
-    #   - 5000:5000
+    ports : 
+      - 5000:5000
 
