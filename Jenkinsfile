@@ -17,7 +17,7 @@ pipeline{
         // }
         stage('Build'){
             steps{
-                dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
+                dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Project_pipeline\\server_proj') {
                     // bat 'docker compose build'
                     bat 'docker compose -f sample.yml up -d --build'
                 }
