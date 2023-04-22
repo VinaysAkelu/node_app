@@ -11,7 +11,7 @@ pipeline{
             steps{
                 bat 'docker build -t application --no-cache .'
                 dir('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\sample_Server_pipeline\\server_proj') {
-                    bat 'docker build -t server1 --no-cahe .'
+                    bat 'docker build -t server1 --no-cache .'
                 }
             }
         }

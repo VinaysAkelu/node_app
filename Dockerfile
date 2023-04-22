@@ -1,8 +1,6 @@
-FROM ubuntu
+FROM node:latest
 RUN mkdir /vinay
 WORKDIR /vinay
-RUN apt-get update && apt-get install -y nodejs && apt-get install -y npm
-COPY . /vinay
+COPY . /vinay/
 RUN npm install express
 CMD node web.js
-
